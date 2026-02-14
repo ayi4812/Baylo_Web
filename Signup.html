@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Lorem Ipsum</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        
+        body { 
+            background-color: #8D5535; 
+            overflow-x: hidden;
+        }
+
+        /* --- STICKY NAVBAR --- */
+        .top-bar-wrapper {
+            position: sticky;
+            top: 0;
+            z-index: 1050;
+            background-color: #8D5535; 
+            padding: 20px 0; 
+        }
+
+        .top-bar { 
+            background-color: #BDE3F5; 
+            height: 65px; 
+            border-radius: 40px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 0 20px; 
+        }
+
+        .nav-btn { 
+            background-color: #211915; 
+            color: white !important; 
+            padding: 10px 35px; 
+            border-radius: 30px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            font-size: 14px; 
+        }
+
+        /* --- BRANDING SECTION --- */
+        .left-branding { 
+            color: #FDFDCB; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Desktop Fixed Logic */
+        @media (min-width: 992px) {
+            .left-branding { 
+                position: fixed; 
+                top: 105px; 
+                bottom: 0;
+                width: 450px; /* Aligned to col-lg-5 */
+                align-items: flex-start;
+                text-align: left;
+                padding-right: 50px;
+            }
+            .form-col {
+                margin-left: 41.666%; /* Pushes form to right side of fixed branding */
+            }
+        }
+
+        /* Mobile View (Matches Reference Image) */
+        @media (max-width: 991px) {
+            .left-branding {
+                padding: 60px 20px;
+            }
+            .left-branding h1, .left-branding p {
+                display: none; /* Only show logo on mobile like the image */
+            }
+            .form-card {
+                border-radius: 60px 60px 0 0 !important;
+                margin-top: 0;
+            }
+            .top-bar-wrapper { display: none; } /* Hide nav on mobile per image */
+        }
+
+        /* --- FORM CARD --- */
+        .form-card { 
+            background-color: #BDE3F5; 
+            border-radius: 60px 60px 0 0; 
+            padding: 40px 50px; 
+            min-height: calc(100vh - 105px);
+        }
+
+        .form-card h2 { 
+            font-size: 32px; 
+            font-weight: 800; 
+            margin-bottom: 25px; 
+            color: #211915; 
+        }
+
+        .section-label { 
+            font-size: 16px; 
+            font-weight: 700; 
+            color: #211915; 
+            margin: 15px 0 10px 5px;
+            text-transform: uppercase;
+        }
+
+        .form-control-pill { 
+            width: 100%; 
+            padding: 16px 25px; 
+            border-radius: 40px; 
+            border: 1px solid #fff; 
+            outline: none; 
+            background: #fff; 
+            font-size: 14px;
+        }
+
+        .terms-row { 
+            display: flex; 
+            align-items: flex-start; 
+            gap: 10px; 
+            margin: 20px 0; 
+            font-size: 11px; 
+            color: #333; 
+        }
+
+        .submit-btn { 
+            background-color: #FDFDCB; 
+            border: none; 
+            padding: 18px; 
+            border-radius: 40px; 
+            font-weight: 800; 
+            font-size: 18px; 
+            width: 100%;
+            color: #211915;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* --- SOCIAL BUTTONS --- */
+        .social-divider {
+            text-align: center;
+            font-size: 12px;
+            font-weight: 800;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            color: #211915;
+        }
+        .social-divider::before, .social-divider::after {
+            content: "";
+            flex: 1;
+            height: 2px;
+            background: rgba(33, 25, 21, 0.1);
+            margin: 0 15px;
+        }
+
+        .social-btn {
+            flex: 1;
+            height: 55px;
+            border-radius: 30px;
+            border: none;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="top-bar-wrapper">
+        <div class="top-bar shadow-sm">
+            <img src="images/logo.png" style="height:35px;">
+            <a href="Login.html" class="nav-btn">Login</a>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-5">
+            <section class="left-branding">
+                <img src="images/logo.png" style="width: 180px; margin-bottom: 20px;">
+                <h1>lorem Ipsum</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </section>
+        </div>
+
+        <div class="col-lg-7 form-col">
+            <section class="form-card shadow-lg">
+                <h2 class="text-uppercase">Sign Up</h2>
+                
+                <form>
+                    <div class="mb-3"><input type="text" class="form-control-pill" placeholder="Enter your First Name"></div>
+                    <div class="mb-3"><input type="text" class="form-control-pill" placeholder="Enter your Middle Name"></div>
+                    <div class="mb-3"><input type="text" class="form-control-pill" placeholder="Enter your Last Name"></div>
+                    <div class="mb-3"><input type="text" class="form-control-pill" placeholder="Enter your Address"></div>
+                    
+                    <p class="section-label">Password</p>
+                    <div class="mb-3"><input type="password" class="form-control-pill" placeholder="Create your Password"></div>
+                    <div class="mb-3"><input type="password" class="form-control-pill" placeholder="Confirm your Password"></div>
+                    
+                    <div class="terms-row">
+                        <input type="checkbox" class="form-check-input mt-0">
+                        <label>By signing up you agree to our <a href="#" class="text-primary text-decoration-underline">Terms and condition</a> and <a href="#" class="text-primary text-decoration-underline">privacy policy</a>.</label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">➔ CREATE ACCOUNT</button>
+
+                    <div class="social-divider">OR SIGN UP USING</div>
+                    <div class="d-flex gap-3 pb-4">
+                        <button type="button" class="social-btn">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" height="24">
+                        </button>
+                        <button type="button" class="social-btn">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" height="24">
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
